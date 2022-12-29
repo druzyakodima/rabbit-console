@@ -1,7 +1,6 @@
 package org.rabbit.console.consumer;
 
 import com.rabbitmq.client.*;
-
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
 
@@ -33,7 +32,6 @@ public class DoubleDirectReceiver {
         }
 
         System.out.println("[*] Waiting for message");
-
 
         DeliverCallback deliverCallback = (consumerTag, delivery) -> {
             String message = new String(delivery.getBody(), StandardCharsets.UTF_8);
